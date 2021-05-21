@@ -1,0 +1,40 @@
+
+.mensagem, .login{
+    padding: 0;
+    height: 100vh;
+}
+.mensagem{
+    h1{
+
+    }
+    p{
+        font-size: 22px;
+    }
+}
+
+.login{
+    .cadastre-se{
+        top: 5px;
+    }
+
+    form{
+        i{
+            left: 15px;
+            opacity: 0.2;
+        }
+        :-ms-input-placeholder{
+            opacity: 0.3;
+        }
+        ::placeholder{
+            opacity: 0.6;
+            
+        }
+    }
+    .pattern{
+        left: 3em;
+    }
+}
+
+.full-height{
+    height: 100vh !important;
+}

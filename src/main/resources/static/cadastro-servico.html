@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Cadastro - Bom Serviço</title>
+
+  </head>
+  <body>
+    <img src="bolinhaAzul.svg" class="bolinhaAzul">
+    <div class="container mt-5 pt-5 ">
+      <h2 class="text-center"> Cadastro de serviço</h2>
+      <div id="registerForm"  class="d-flex justify-content-center flex-column mt-5">
+        <form class="bg-white p-5 col-12 rounded-4">
+          <div class="form-group mb-4">
+            <label for="servico">Nome do serviço</label>
+            <input type="text" name="titulo" class="form-control border border-rounded-lg" id="servico" placeholder="Servico">
+          </div>
+          <div class="form-group mb-4">
+            <label for="categoria">Categoria que ele se encaixa</label>
+            <select class="form-control" name="categoria" id="categoria">
+            	<option>Jogos</option>
+            	<option>Eletrodomesticos</option>
+            	<option>Bebidas Alcolicas</option>
+            	<option>Carros</option>
+            </select>
+          </div>
+          <div class="form-group mb-4">
+            <label for="descricao">Descrição sobre o serviço</label>
+            <textarea class="form-control" name="descricao" id="descricao"> </textarea>
+          </div>
+
+          <div class="form-group mb-4">
+            <span>Fotos do serviço (no minimo 1)</span>
+
+            <div class="d-flex">
+              <div>
+                <label class="card-img">
+                  <span>Imagem 1</span>
+                </label>
+                <input type="file" class="form-control d-none" id=""/>
+              </div>
+              
+              <div>
+                <label class="card-img">
+                  <span>Imagem 1</span>
+                </label>
+                <input type="file" class="form-control d-none" id=""/>
+              </div>
+
+              <div>
+                <label class="card-img">
+                  <span>Imagem 1</span>
+                </label>
+                <input type="file" class="form-control d-none" id=""/>
+              </div>
+            </div>
+
+          </div>
+
+          <a href="/" type="submit" class="btn border bg-white">Cancelar</a>
+          <a href="cadastrar/servico" type="submit" class="btn btn-gradient-blue">Cadastrar</a>
+        </form>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+  </body>
+</html>

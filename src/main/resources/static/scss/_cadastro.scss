@@ -1,0 +1,29 @@
+body {
+    background: #F4F4F4;
+    color: #263238;
+}
+
+.bolinhaAzul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#registerForm
+{
+  border-radius: 25px;
+  box-shadow: 4px 4px 8px rgba(38, 50, 56,0.2);
+  margin: 0 auto;
+  width:60%; 
+}
+
+.card-img{
+  background: #FAFAFA;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin: 0.5rem;
+  text-align: center;
+  border: 1px solid rgba(38, 50, 56,0.2);
+  width: 10em;
+}
