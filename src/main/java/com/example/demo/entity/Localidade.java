@@ -5,9 +5,11 @@ public class Localidade {
 	private String cidade;
 	private String estado;
 	
-	
+	public Localidade(int id_localidade) {
+		this.id_localidade = id_localidade;
+	}
+
 	public Localidade(int id_localidade, String cidade, String estado) {
-		super();
 		this.id_localidade = id_localidade;
 		this.cidade = cidade;
 		this.estado = estado;

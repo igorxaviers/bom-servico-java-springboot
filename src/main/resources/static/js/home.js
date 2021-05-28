@@ -4,3 +4,4 @@ categorias.forEach((element) => {
         element.classList.toggle('cat-ativo');
     });
 });
+

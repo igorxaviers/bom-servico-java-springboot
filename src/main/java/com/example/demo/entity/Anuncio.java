@@ -1,24 +1,34 @@
 package com.example.demo.entity;
 
+import java.math.BigDecimal;
+
 public class Anuncio {
+	private int id_anu;
 	private String titulo; 
 	private Categoria categoria;
 	private String descricao;
-	private double preco; 
+	private Double preco; 
 	private String contato; 
 	private Localidade localidade; 
 	private Usuario usuario;
 	
-	public Anuncio(String titulo, Categoria categoria, String descricao, double preco, String contato,
-                   Localidade localidade, Usuario usuario) {
-		super();
+	public Anuncio(int id_anu, String titulo, String descricao, Double preco, String contato, Localidade localidade,  Categoria categoria, Usuario usuario) {
+		this.id_anu = id_anu;
 		this.titulo = titulo;
-		this.categoria = categoria;
 		this.descricao = descricao;
 		this.preco = preco;
 		this.contato = contato;
 		this.localidade = localidade;
+		this.categoria = categoria;
 		this.usuario = usuario;
+	}
+
+	public int getId() {
+		return id_anu;
+	}
+
+	public void setTitulo(int id) {
+		this.id_anu = id;
 	}
 
 	public String getTitulo() {

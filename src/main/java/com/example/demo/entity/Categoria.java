@@ -9,6 +9,9 @@ public class Categoria {
 		this.id_cat = id_cat;
 		this.label = label;
 	}
+	public Categoria(int id_cat) {
+		this.id_cat = id_cat;
+	}
 
 	public int getId_cat() {
 		return id_cat;

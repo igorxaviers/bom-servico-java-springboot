@@ -10,16 +10,6 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 public class UsuarioDAO {
-    @Autowired
-    private JdbcTemplate jdbcTemplate;
-
-    public JdbcTemplate getJdbcTemplate() {
-        return jdbcTemplate;
-    }
-
-    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
-        this.jdbcTemplate = jdbcTemplate;
-    }
 
 
     public boolean salvar(Usuario u) {
@@ -67,6 +57,28 @@ public class UsuarioDAO {
     public Usuario getUsuario(int id) {
         Usuario u = null;
         String sql = "select * from usuarios where id_usu = " + id;
+        Conexao con = new Conexao();
+        ResultSet rs = con.consultar(sql);
+        try {
+            if (rs.next())
+                u = new Usuario(
+                        rs.getInt("id_usu"),
+                        rs.getString("email"),
+                        rs.getString("senha"),
+                        rs.getInt("permissao"),
+                        rs.getInt("token"),
+                        rs.getString("nome"),
+                        rs.getString("permissao"));
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+        con.fecharConexao();
+        return u;
+    }
+
+    public Usuario getUsuarioEmail(String email) {
+        Usuario u = null;
+        String sql = "select * from usuarios where email = " + email;
         Conexao con = new Conexao();
         ResultSet rs = con.consultar(sql);
         try {

@@ -9,6 +9,8 @@ public class Usuario {
 	private String sobrenome;
 	private String nome;
 
+	public Usuario(){}
+
 	public Usuario(int idUsu){
 		this.idUsu = idUsu;
 	}
@@ -30,6 +32,17 @@ public class Usuario {
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 	}
+	public Usuario(Usuario u){
+		this.idUsu = u.getIdUsu();
+		this.email = u.getEmail();
+		this.senha = u.getSenha();
+		this.token = u.getToken();
+		this.permissao = u.getPermissao();
+		this.nome = u.getNome();
+		this.sobrenome = u.getSobrenome();
+	}
+
+	
 
 	public int getIdUsu() {
 		return this.idUsu;

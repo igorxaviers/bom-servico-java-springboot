@@ -13,24 +13,17 @@ import java.util.Map;
 @RestController
 public class UserController {
 
-    @RequestMapping(value = "/cadastrarUsuario", method = RequestMethod.POST)
+    @RequestMapping(value = "/users/cadastrar", method = RequestMethod.POST)
     public ResponseEntity<Object> cadUsuario(@RequestBody Usuario usuario){
         UsuarioDAO uDAO = new UsuarioDAO();
         System.out.println(usuario);
-        Usuario u = new Usuario(
-                usuario.getEmail(),
-                usuario.getSenha(),
-                usuario.getToken(),
-                usuario.getPermissao(),
-                usuario.getNome(),
-                usuario.getSobrenome());
         uDAO.salvar(usuario);
         String retorno="Gravado com sucesso";
         System.out.println("deu certo");
         return new ResponseEntity<>(retorno, HttpStatus.CREATED);
     }
 
-    @RequestMapping(value="/listar")
+    @RequestMapping(value="/users/listar")
     public ResponseEntity <Object> listUsuarios()
     {
         Map<String,Usuario> mapUsuarios = new HashMap<>();
@@ -40,7 +33,7 @@ public class UserController {
         return new ResponseEntity<>(mapUsuarios.values(),HttpStatus.OK);
     }
 
-    @RequestMapping(value="/buscar")
+    @RequestMapping(value="/users/buscar")
     public ResponseEntity <Object> buscar(@RequestParam(value="id") int id)
     {
         Usuario u = new UsuarioDAO().getUsuario(id);
