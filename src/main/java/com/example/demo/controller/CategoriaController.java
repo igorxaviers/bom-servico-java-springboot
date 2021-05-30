@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 // @RequestMapping(value = "/categoria/cadastrar")
 public class CategoriaController{
 
-    @GetMapping("/cadastroC")
+    @GetMapping("/categoria/new")
     public String index(){
       return "cadastro-categoria.html";
     }
