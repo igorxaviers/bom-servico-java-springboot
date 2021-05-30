@@ -17,13 +17,13 @@ import org.springframework.web.bind.annotation.*;
 // @RequestMapping(value = "/categoria/cadastrar")
 public class CategoriaController{
 
-    @GetMapping("/categoria/new")
+    @GetMapping("/categoria-nova")
     public String index(){
       return "cadastro-categoria.html";
     }
 
-    @RequestMapping(value = "/categoria/create", method = RequestMethod.POST)
-    public String create(@RequestBody Categoria categoria, HttpServletRequest request, HttpSession session)
+    @RequestMapping(value = "/categoria-create", method = RequestMethod.POST)
+    public String create(@RequestBody Categoria categoria, HttpServletRequest request /*,HttpSession session*/)
     {
       //UsuarioDAO uDao = new UsuarioDAO();
       //Usuario u = uDao.getUsuarioEmail(usuario.getEmail());

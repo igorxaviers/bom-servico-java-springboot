@@ -4,7 +4,7 @@
   font-weight: bold;
   background: linear-gradient(70deg, var(--blue) -15%, var(--purple) 180%);
   color: white;
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
 }
 
@@ -14,9 +14,14 @@
 }
 
 .btn-white{
+  font-size: 18px;
+  line-height: 177.1%;
   background-color: whitesmoke;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
 }
 
 .btn-white:hover{
-  background-color: #bebebe;
+  background-color: #b6b6b6;
 }

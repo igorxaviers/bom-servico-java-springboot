@@ -35,20 +35,38 @@
   height: 100vh;
   padding: 15px;
 }
-.side-links-container{
-  width: 300px;
-  height: 60px;
-  margin-bottom: 2rem;
-  background: rgba(0, 0, 0, 0.06);
+
+.side-links-container
+{
+  margin-top: 1rem;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  justify-content:center;
+  display: flex;
   border-radius: 8px;
 }
-.side-links-container li a{
+.nav-list{
+  list-style: none;
+  width: 90%;
+}
+
+.side-links-container ul.nav-list li a{
+  background: rgba(0, 0, 0, 0.06);
+  margin-bottom: 20px;
+  height: 3.4rem;
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #303030;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
 }
 
+.side-links-container ul.nav-list li a:hover
+{
+  background-color: #d1cfcfb6
+}
 
 @import url('http://fonts.cdnfonts.com/css/axiforma');
 @import "cadastro";

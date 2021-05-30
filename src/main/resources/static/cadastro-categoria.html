@@ -15,27 +15,30 @@
     <img src="bolinhaAzulDireita.svg" class="bolinhaAzul">
     <div class="container-fluid">
       <div class="row d-flex">
-        <div class="col-4 m-0 layout-left">
-          <img class="text-center" src="./images/assets/logo.svg">Logo</img>
+        <div class="col-3 m-0 layout-left">
+          <div class="d-flex justify-content-center">
+            <img class="w-50" src="./images/assets/logo.svg"></img>
+          </div>
           <div>
-            <ul>
-              <div class="side-links-container">
-                <li><a href="#">Gerenciar Categorias</a></li>
-              </div>
-            </ul>
+              <nav class="side-links-container">
+                <ul class="nav-list">
+                  <li><a href="#"> <img src="./images/assets/logo-categorias.svg" class="pr-4">  Gerenciar Categorias</a></li>
+                  <li><a href="#"> <img src="./images/assets/logo-servicos.svg" class="pr-4"> Gerenciar Serviços</a></li>
+                </ul>
+            </nav>
           </div>
         </div>
-        <div class="col-8 mt-5 pt-5 ">
+        <div class="col-9 mt-5 pt-5 ">
           <h2 class="text-center"> Cadastro de Categoria</h2>
           <div id="registerForm"  class="d-flex justify-content-center flex-column mt-5">
-            <form class="bg-white p-5 col-12 rounded-4">
+            <form class="bg-white p-5 col-12 rounded-4" method="post">
               <div class="form-group mb-4">
                 <label for="categoria">Nome da categoria</label>
                 <input type="text" name="categoria" class="form-control border border-rounded-lg" id="categoria" placeholder="Veiculos, Eletrodomesticos, etc">
               </div>
     
               <a href="/" type="submit" class="btn border btn-white">Cancelar</a>
-              <button @onclick="cadastrarCategoria()" type="submit" class="btn btn-gradient-blue">Cadastrar</button>
+              <button onclick="cadastrarCategoria()" class="btn btn-gradient-blue">Cadastrar</button>
             </form>
           </div>
         </div>
