@@ -5,9 +5,11 @@ function cadastrarCategoria()
   URL = 'categoria-create';
   fetch(URL, {method:'post', body:form})
       .then((response) => {
-          return response.text()
+        console.log(response)
+        return response.text()
       })
       .then((result) => {
+        console.log(result)
       }
   );
 }

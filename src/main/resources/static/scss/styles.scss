@@ -2,6 +2,8 @@
     --purple: #862AE2;
     --blue: #23DBE7;
     --text-color: #303030; 
+    --cream-White: #fffdd0;
+    --text-color-white-button: #263238d7;
 }
 *{
     font-family: 'Axiforma', sans-serif;
@@ -50,6 +52,9 @@
   list-style: none;
   width: 90%;
 }
+.nav-list li a.rounded-extra{
+  border-radius: 11px;
+}
 
 .side-links-container ul.nav-list li a{
   background: rgba(0, 0, 0, 0.06);
@@ -69,9 +74,10 @@
 }
 
 @import url('http://fonts.cdnfonts.com/css/axiforma');
-@import "cadastro";
-@import "home";
-@import "form";
 @import "buttons";
+@import "cadastro";
+@import "form";
+@import "home";
 @import "login";
 @import "otherStyles";
+@import "card";

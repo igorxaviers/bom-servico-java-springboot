@@ -9,60 +9,76 @@
 
   </head>
   <body>
-    <img src="bolinhaAzul.svg" class="bolinhaAzul">
-    <div class="container mt-5 pt-5 ">
-      <h2 class="text-center"> Cadastro de serviço</h2>
-      <div id="registerForm"  class="d-flex justify-content-center flex-column mt-5">
-        <form class="bg-white p-5 col-12 rounded-4">
-          <div class="form-group mb-4">
-            <label for="servico">Nome do serviço</label>
-            <input type="text" name="titulo" class="form-control border border-rounded-lg" id="servico" placeholder="Servico">
+    <img src="bolinhaAzulDireita.svg" class="bolinhaAzul">
+    <div class="container-fluid">
+      <div class="row d-flex">
+        <div class="col-3 m-0 layout-left">
+          <div class="d-flex justify-content-center">
+            <img class="w-50" src="./images/assets/logo.svg"></img>
           </div>
-          <div class="form-group mb-4">
-            <label for="categoria">Categoria que ele se encaixa</label>
-            <select class="form-control" name="categoria" id="categoria">
-            	<option>Jogos</option>
-            	<option>Eletrodomesticos</option>
-            	<option>Bebidas Alcolicas</option>
-            	<option>Carros</option>
-            </select>
+          <div>
+            <nav class="side-links-container">
+              <ul class="nav-list">
+                <li class=""><a href="#" class="rounded-extra"> <img src="./images/assets/logo-servicos.svg" class="pr-4"> Gerenciar Serviços</a></li>
+              </ul>
+          </nav>
           </div>
-          <div class="form-group mb-4">
-            <label for="descricao">Descrição sobre o serviço</label>
-            <textarea class="form-control" name="descricao" id="descricao"> </textarea>
-          </div>
-
-          <div class="form-group mb-4">
-            <span>Fotos do serviço (no minimo 1)</span>
-
-            <div class="d-flex">
-              <div>
-                <label class="card-img">
-                  <span>Imagem 1</span>
-                </label>
-                <input type="file" class="form-control d-none" id=""/>
+        </div>
+        <div class="col-9 mt-5 pt-5">
+          <h2 class="text-center"> Cadastro de serviço</h2>
+          <div id="registerForm"  class="d-flex justify-content-center flex-column mt-5">
+            <form class="bg-white p-5 col-12 rounded-4">
+              <div class="form-group mb-4">
+                <label for="servico">Nome do serviço</label>
+                <input type="text" name="titulo" class="form-control border border-rounded-lg" id="servico" placeholder="Servico">
               </div>
-              
-              <div>
-                <label class="card-img">
-                  <span>Imagem 1</span>
-                </label>
-                <input type="file" class="form-control d-none" id=""/>
+              <div class="form-group mb-4">
+                <label for="categoria">Categoria que ele se encaixa</label>
+                <select class="form-control" name="categoria" id="categoria">
+                  <option>Jogos</option>
+                  <option>Eletrodomesticos</option>
+                  <option>Bebidas Alcolicas</option>
+                  <option>Carros</option>
+                </select>
               </div>
-
-              <div>
-                <label class="card-img">
-                  <span>Imagem 1</span>
-                </label>
-                <input type="file" class="form-control d-none" id=""/>
+              <div class="form-group mb-4">
+                <label for="descricao">Descrição sobre o serviço</label>
+                <textarea class="form-control" name="descricao" id="descricao"> </textarea>
               </div>
-            </div>
-
+    
+              <div class="form-group mb-4">
+                <span>Fotos do serviço (no minimo 1)</span>
+    
+                <div class="d-flex">
+                  <div>
+                    <label class="card-img">
+                      <span>Imagem 1</span>
+                    </label>
+                    <input type="file" class="form-control d-none" id=""/>
+                  </div>
+                  
+                  <div>
+                    <label class="card-img">
+                      <span>Imagem 1</span>
+                    </label>
+                    <input type="file" class="form-control d-none" id=""/>
+                  </div>
+    
+                  <div>
+                    <label class="card-img">
+                      <span>Imagem 1</span>
+                    </label>
+                    <input type="file" class="form-control d-none" id=""/>
+                  </div>
+                </div>
+    
+              </div>
+    
+              <a href="/" type="submit" class="btn border btn-white">Cancelar</a>
+              <a href="cadastrar/servico" type="submit" class="btn btn-gradient-blue">Cadastrar</a>
+            </form>
           </div>
-
-          <a href="/" type="submit" class="btn border bg-white">Cancelar</a>
-          <a href="cadastrar/servico" type="submit" class="btn btn-gradient-blue">Cadastrar</a>
-        </form>
+        </div>
       </div>
     </div>
 
