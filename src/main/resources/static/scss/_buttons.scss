@@ -4,11 +4,33 @@
   font-weight: bold;
   background: linear-gradient(70deg, var(--blue) -15%, var(--purple) 180%);
   color: white;
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
+  transition: 0.3s;
+
 }
 
 .btn-gradient-blue:hover {
   background: linear-gradient(70deg, var(--blue) -15%, var(--purple) 180%);
   color: white;
+  transition: 0.3s;
+
+}
+
+.btn-white{
+  font-size: 18px;
+  line-height: 177.1%;
+  background-color: whitesmoke;
+  font-weight: bold;
+  border-radius: 8px;
+  color: var(--text-color-white-button);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.10);
+  transition: 0.3s;
+}
+
+.btn-white:hover{
+  transition: 0.3s;
+  color: var(--text-color-white-button);
+  background-color: #b6b6b6;
+  filter: brightness(100%);
 }
