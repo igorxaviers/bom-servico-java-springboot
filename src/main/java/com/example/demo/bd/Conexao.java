@@ -23,8 +23,8 @@ public class Conexao {
 
     public Conexao(String driver, String local, String banco, String usuario, String senha) {
         try {
-            Class.forName(driver); // "org.postgresql.Driver");
-            String url = local + banco; // "jdbc:postgresql://localhost/"+banco;
+            Class.forName(driver); 
+            String url = local + banco; 
             connect = DriverManager.getConnection(url, usuario, senha);
         } catch (ClassNotFoundException cnfex) {
             erro = "Falha ao ler o driver JDBC: " + cnfex.toString();

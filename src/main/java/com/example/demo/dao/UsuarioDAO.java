@@ -13,10 +13,10 @@ public class UsuarioDAO {
 
 
     public boolean salvar(Usuario u) {
-        String sql = "INSERT INTO usuarios (email, senha, token, permissao, nome, sobrenome) VALUES ('$1','$2',$3,$4,'$5','$6')";
+        String sql = "INSERT INTO usuarios (email, senha, token, permissao, nome, sobrenome) VALUES ('$1','$2','$3',$4,'$5','$6')";
         sql = sql.replace("$1", u.getEmail());
         sql = sql.replace("$2", u.getSenha());
-        sql = sql.replace("$3", Integer.toString(u.getToken()));
+        sql = sql.replace("$3", u.getToken());
         sql = sql.replace("$4", Integer.toString(u.getPermissao()));
         sql = sql.replace("$5", u.getNome());
         sql = sql.replace("$6", u.getSobrenome());
@@ -43,8 +43,8 @@ public class UsuarioDAO {
                                 rs.getInt("id_usu"),
                                 rs.getString("email"),
                                 rs.getString("senha"),
+                                rs.getString("token"),
                                 rs.getInt("permissao"),
-                                rs.getInt("token"),
                                 rs.getString("nome"),
                                 rs.getString("permissao")));
         } catch (Exception e) {
@@ -65,8 +65,8 @@ public class UsuarioDAO {
                         rs.getInt("id_usu"),
                         rs.getString("email"),
                         rs.getString("senha"),
+                        rs.getString("token"),
                         rs.getInt("permissao"),
-                        rs.getInt("token"),
                         rs.getString("nome"),
                         rs.getString("permissao"));
         } catch (Exception e) {
@@ -76,9 +76,9 @@ public class UsuarioDAO {
         return u;
     }
 
-    public Usuario getUsuarioEmail(String email) {
+    public Usuario verificaUsuario(String email, String senha) {
         Usuario u = null;
-        String sql = "select * from usuarios where email = " + email;
+        String sql = "select * from usuarios where email = "+ email +" and senha = "+ senha;
         Conexao con = new Conexao();
         ResultSet rs = con.consultar(sql);
         try {
@@ -87,8 +87,8 @@ public class UsuarioDAO {
                         rs.getInt("id_usu"),
                         rs.getString("email"),
                         rs.getString("senha"),
+                        rs.getString("token"),
                         rs.getInt("permissao"),
-                        rs.getInt("token"),
                         rs.getString("nome"),
                         rs.getString("permissao"));
         } catch (Exception e) {

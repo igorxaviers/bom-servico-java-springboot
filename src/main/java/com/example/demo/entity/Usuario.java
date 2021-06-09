@@ -4,7 +4,7 @@ public class Usuario {
 	private int idUsu;
 	private String email;
 	private String senha;
-	private int token;
+	private String token;
 	private int permissao;
 	private String sobrenome;
 	private String nome;
@@ -14,7 +14,7 @@ public class Usuario {
 	public Usuario(int idUsu){
 		this.idUsu = idUsu;
 	}
-	public Usuario(int idUsu, String email, String senha, int token,  int permissao, String nome, String sobrenome) {
+	public Usuario(int idUsu, String email, String senha, String token,  int permissao, String nome, String sobrenome) {
 		this.idUsu = idUsu;
 		this.email = email;
 		this.senha = senha;
@@ -23,7 +23,7 @@ public class Usuario {
 		this.nome = nome;
 		this.sobrenome = sobrenome;
 	}
-	public Usuario(String email, String senha, int token, int permissao, String nome, String sobrenome) {
+	public Usuario(String email, String senha, String token, int permissao, String nome, String sobrenome) {
 		this(0);
 		this.email = email;
 		this.senha = senha;
@@ -48,11 +48,11 @@ public class Usuario {
 		return this.idUsu;
 	}
 
-	public int getToken() {
+	public String getToken() {
 		return token;
 	}
 
-	public void setToken(int token) {
+	public void setToken(String token) {
 		this.token = token;
 	}
 
